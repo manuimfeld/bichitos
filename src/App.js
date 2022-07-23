@@ -1,13 +1,12 @@
 import './App.css';
-import Header from './components/Header';
-import Main from './components/Main';
+import PrincipalRouter from './routers/PrincipalRouter';
 
 function App() {
   return (
     <>
     <div className="layout">
-    <Header />
-    <Main />
+    <PrincipalRouter>
+    </PrincipalRouter>
     </div>
     </>
   );

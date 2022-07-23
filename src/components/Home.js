@@ -3,7 +3,7 @@ import BestSellers from './BestSellers'
 import Carousel from './Carousel'
 import Category from './Category'
 
-const Main = () => {
+const Home = () => {
   return (
     <>
     <main>
@@ -15,4 +15,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Home
