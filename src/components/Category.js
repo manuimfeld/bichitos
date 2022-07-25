@@ -3,7 +3,6 @@ import React from 'react'
 const Category = () => {
   return (
     <>
-    <section className='category-section'>
         <h2>Productos de vivero y demás</h2>
 
         <div className="card-category">
@@ -24,7 +23,6 @@ const Category = () => {
             <p>AGROQUÍMICOS</p>
         </article>
         </div>
-    </section>
     </>
   )
 }
