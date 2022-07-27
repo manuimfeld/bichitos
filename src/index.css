@@ -26,7 +26,7 @@ code {
 
 /* HEADER */
 
-header, nav, ul {
+header, nav, header nav ul {
   height: 50px;
   width: 100vw;
   background: #004173;
@@ -50,6 +50,60 @@ header nav ul {
 
 header nav ul li {
   display: inline-block;
+}
+
+header nav ul li:nth-child(1) {
+  margin-right: auto;
+  margin-left: 15px;
+}
+
+header nav ul li:nth-child(3) {
+  margin-right: 15px;
+  padding-left: 25px;
+}
+
+.header-button {
+  height: 20px;
+  width: 20px;
+  filter: invert(60%) sepia(72%) saturate(3432%) hue-rotate(161deg) brightness(104%) contrast(91%);
+}
+
+
+.burger-menu {
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh - 50px);
+  background: #0979B0;
+  margin-top: 50px;
+  z-index: 9;
+}
+
+.burger-menu ul {
+  margin: 0;
+  padding: 15px 15px 0px 15px;
+  list-style: none;
+  color: #FFFFFF;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.burger-menu ul li {
+  margin-bottom: 20px;
+}
+
+.burger-menu ul li img {
+  vertical-align: middle;
+}
+
+.burger-menu ul li p {
+  margin: 0 0 0 10px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
 }
 
 /* MAIN */
@@ -87,6 +141,7 @@ main {
   font-weight: 500;
   font-size: 22px;
   color: #0CB7F2;
+  margin: auto 0px 0px 0px;
 }
 
 main .card-bestsellers {
