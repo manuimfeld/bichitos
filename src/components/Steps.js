@@ -7,6 +7,7 @@ import DeliveryImage from '../img/lado-del-camion.svg'
 const Steps = () => {
   return (
     <>
+    <h1>Comprá en 4 pasos</h1>
     <article>
     <img src={CarritoImage} alt="" className='image-steps'/>
     <h2>Armá tu pedido</h2>

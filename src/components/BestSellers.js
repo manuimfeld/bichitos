@@ -7,19 +7,19 @@ const BestSellers = () => {
     <div className="card-bestsellers">
     <article>
         <img src={require('../img/3-KG-GRATIS-5.png')} alt="" />
+        <p>DOG SELECTION</p>
+    </article>
+    <article>
+        <img src={require('../img/vitalcan.jpg')}alt="" />
+        <p>VITALCAN</p>
+    </article>
+    <article>
+        <img src={require('../img/catchow.jpg')}alt="" />
+        <p>CAT CHOW</p>
+    </article>
+    <article>
+        <img src={require('../img/topnutrition.jpg')}alt="" />
         <p>TOP NUTRITION</p>
-    </article>
-    <article>
-        <img src={require('../img/3-KG-GRATIS-5.png')}alt="" />
-        <p>DOG SELECTION</p>
-    </article>
-    <article>
-        <img src={require('../img/3-KG-GRATIS-5.png')}alt="" />
-        <p>DOG SELECTION</p>
-    </article>
-    <article>
-        <img src={require('../img/3-KG-GRATIS-5.png')}alt="" />
-        <p>DOG SELECTION</p>
     </article>
     </div>
     </>

@@ -21,10 +21,13 @@ const Header = () => {
             <img src={BurgerMenuImage} alt="" className='header-button'/>
           </li>
           <li>
-            <img src={BusquedaImage} alt="" className='header-button'/>
+            <h1>BICHITOS</h1>
           </li>
           <li>
-            <img src={CarritoImage} alt="" className='header-button'/>
+            <img src={BusquedaImage} alt="" className='nav-button'/>
+          </li>
+          <li>
+            <img src={CarritoImage} alt="" className='nav-button'/>
           </li>
         </ul>
       </nav>
