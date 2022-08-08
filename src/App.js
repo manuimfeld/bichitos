@@ -8,9 +8,7 @@ function App() {
 
   return (
     <>
-      <div className="layout">
-        <PrincipalRouter cart={cart} setCart={setCart}></PrincipalRouter>
-      </div>
+      <PrincipalRouter cart={cart} setCart={setCart}></PrincipalRouter>
     </>
   );
 }

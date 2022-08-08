@@ -2,11 +2,13 @@ import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ cart }) => {
   return (
     <header>
-      <Navbar bg="dark" variant={"dark"} expand="lg">
-        <Navbar.Brand href="/">Bichitos</Navbar.Brand>
+      <Navbar bg="primary" variant={"primary"} expand="lg">
+        <Navbar.Brand href="/" className="text-white">
+          Bichitos
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -14,23 +16,24 @@ const Header = () => {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link as={Link} to="/">
+            <Nav.Link as={Link} to="/" className="text-white">
               Inicio
             </Nav.Link>
-            <Nav.Link as={Link} to="/alimentos">
+            <Nav.Link as={Link} to="/alimentos" className="text-white">
               Alimentos
             </Nav.Link>
-            <Nav.Link as={Link} to="/varios">
+            <Nav.Link as={Link} to="/varios" className="text-white">
               Varios
             </Nav.Link>
-            <Nav.Link as={Link} to="/plantas">
+            <Nav.Link as={Link} to="/plantas" className="text-white">
               Plantas
             </Nav.Link>
-            <Nav.Link as={Link} to="/agroquimicos">
+            <Nav.Link as={Link} to="/agroquimicos" className="text-white">
               Agroquimicos
             </Nav.Link>
-            <Nav.Link as={Link} to="/carrito">
+            <Nav.Link as={Link} to="/carrito" className="text-white">
               Carrito
+              <span> {cart.length}</span>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -5,7 +5,7 @@ import Home from "../pages/Home";
 import Error from "../pages/Error";
 import Alimentos from "../components/Alimentos";
 import AlimentosPerro from "../components/AlimentosPerro";
-import AlimentosGato from "../components/AlimentosPerro";
+import AlimentosGato from "../components/AlimentosGato";
 import Varios from "../components/Varios";
 import Plantas from "../components/Plantas";
 import PlantasInterior from "../components/PlantasInterior";
@@ -17,7 +17,7 @@ const PrincipalRouter = ({ cart, setCart }) => {
   return (
     <>
       <BrowserRouter>
-        <Header />
+        <Header cart={cart} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/inicio" element={<Home />} />
