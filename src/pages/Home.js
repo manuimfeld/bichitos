@@ -1,4 +1,5 @@
 import React from "react";
+import AlimentosTop from "../components/AlimentosTop";
 import CarouselHome from "../components/CarouselHome";
 import Category from "../components/Category";
 import Steps from "../components/Steps";
@@ -9,6 +10,7 @@ const Home = () => {
       <main>
         <section className="main">
           <CarouselHome />
+          <AlimentosTop />
         </section>
         <section className="category">
           <Category />
