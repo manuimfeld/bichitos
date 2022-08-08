@@ -3,7 +3,7 @@ import React from "react";
 const AlimentosTop = () => {
   return (
     <>
-      <h2>Los mejores precios de la zona</h2>
+      <h2 className="h2-title">Los mejores precios de la zona</h2>
       <div className="alimentos-top-container">
         <article>
           <img src={require("../img/aliment.png")} alt="" />

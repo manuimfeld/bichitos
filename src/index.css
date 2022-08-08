@@ -16,13 +16,29 @@ code {
   font-family: 'Roboto', sans-serif;
 }
 
+/* BOOTSTRAP */
+
+.navbar-nav-scroll {
+  max-height: 400px!important;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
 .main {
   min-height: 100vh;
   width: 100vw;
+  margin-top: 56px;
 }
 
 .main .Carousel, .carousel-inner {
   height: 40vh;
+}
+
+.h2-title {
+  text-align: center;
+  margin-top: 40px;
 }
 
 .alimentos-top-container {
@@ -84,6 +100,36 @@ code {
   font-weight: 800;
   position: absolute;
   top: 50%; width: 100%; text-align: center;
+}
+
+.steps-container {
+  min-height: 100vw;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.steps-container article {
+  width: 60vw;
+  flex: 0 0 50%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.steps-container article img {
+  width: 40%;
+  height: 100px;
+  filter: invert(58%) sepia(89%) saturate(2933%) hue-rotate(162deg) brightness(105%) contrast(91%);
+}
+
+.steps-container article p {
+  width: 50%;
 }
 
 .alimentos-container {

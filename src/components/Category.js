@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Category = () => {
   return (
     <>
-      <h2>Productos de vivero y demás</h2>
+      <h2 className="h2-title">Productos de vivero y demás</h2>
 
       <div className="card-category">
         <article>

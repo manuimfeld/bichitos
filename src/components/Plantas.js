@@ -7,7 +7,7 @@ const Plantas = () => {
       <article>
         <Link to="/plantas/interior">
           <img
-            src="https://st.depositphotos.com/1146092/1350/i/600/depositphotos_13507988-stock-photo-dog-bowl-hungry-meal-eat.jpg"
+            src="https://www.lavanguardia.com/files/article_main_microformat/uploads/2022/04/03/62490bcd53326.jpeg"
             alt=""
           />
           <p>Plantas de interior</p>
@@ -16,7 +16,7 @@ const Plantas = () => {
       <article>
         <Link to="/plantas/exterior">
           <img
-            src="https://www.zooplus.es/magazine/wp-content/uploads/2022/05/Alimentacion-para-gatitos.jpg"
+            src="https://t1.uc.ltmcdn.com/es/posts/4/0/2/como_cuidar_las_alegrias_del_hogar_en_invierno_28204_orig.jpg"
             alt=""
           />
           <p>Plantas de exterior</p>
