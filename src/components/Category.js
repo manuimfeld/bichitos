@@ -1,30 +1,39 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Category = () => {
   return (
     <>
-        <h2>Productos de vivero y demás</h2>
+      <h2>Productos de vivero y demás</h2>
 
-        <div className="card-category">
+      <div className="card-category">
         <article>
-            <img src={require('../img/aliment.png')} alt="" />
+          <Link to="/alimentos">
+            <img src={require("../img/aliment.png")} alt="" />
             <p>ALIMENTOS</p>
+          </Link>
         </article>
         <article>
-            <img src={require('../img/img_ropas-para-perros.png')} alt="" />
+          <Link to="/varios">
+            <img src={require("../img/img_ropas-para-perros.png")} alt="" />
             <p>VARIOS</p>
+          </Link>
         </article>
         <article>
-            <img src={require('../img/plantas.png')} alt="" />
+          <Link to="plantas">
+            <img src={require("../img/plantas.png")} alt="" />
             <p>PLANTAS</p>
+          </Link>
         </article>
         <article>
-            <img src={require('../img/agroquim.png')} alt="" />
+          <Link to="agroquimicos">
+            <img src={require("../img/agroquim.png")} alt="" />
             <p>AGROQUÍMICOS</p>
+          </Link>
         </article>
-        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Category
+export default Category;
