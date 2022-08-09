@@ -1,14 +1,14 @@
 import React from "react";
 
-const Cart = ({ cart, setCart }) => {
+const Cart = ({ cart }) => {
   return (
     <>
       {cart === null ? (
         <p>asd</p>
       ) : (
-        cart.map((alimento) => {
+        cart.map(({ item: alimento, cantidad }) => {
           return (
-            <div className="container mt-5 mb-5">
+            <div className="container mt-5 mb-5" key={alimento.id}>
               <div className="d-flex justify-content-center row">
                 <div className="col-md-8">
                   <div className="p-2">
@@ -37,12 +37,12 @@ const Cart = ({ cart, setCart }) => {
                     </div>
                     <div className="d-flex flex-row align-items-center qty">
                       <i className="fa fa-minus text-danger"></i>
-                      <h5 className="text-grey mt-1 mr-1 ml-1">2</h5>
+                      <h5 className="text-grey mt-1 mr-1 ml-1">{cantidad}</h5>
                       <i className="fa fa-plus text-success"></i>
                     </div>
                     <div>
                       <h5 className="text-grey">
-                        ${alimento.attributes.Precio}
+                        ${alimento.attributes.Precio * cantidad}
                       </h5>
                     </div>
                     <div className="d-flex align-items-center">

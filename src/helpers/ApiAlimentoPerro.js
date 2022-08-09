@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const ApiCall = (setState, raza) => {
+const ApiCallPerro = (setState, raza) => {
   const endpoint = `https://bichitos.herokuapp.com/api/alimentos?filters[Raza][$eq]=Perro: ${raza}`;
   axios
     .get(endpoint)
@@ -14,4 +14,4 @@ const ApiCall = (setState, raza) => {
     });
 };
 
-export default ApiCall;
+export default ApiCallPerro;

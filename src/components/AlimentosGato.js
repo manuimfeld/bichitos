@@ -3,12 +3,12 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import ApiAlimentoGato from "../helpers/ApiAlimentoGato";
 
-const AlimentosGato = ({ cart, setCart }) => {
+const AlimentosGato = ({ getApiGato }) => {
   const [alimentos, setAlimentos] = useState(null);
   const [raza, setRaza] = useState("Bebe");
 
   useEffect(() => {
-    ApiAlimentoGato(setAlimentos, raza);
+    getApiGato(setAlimentos, raza);
   }, [raza]);
 
   const handleClick = (e) => {

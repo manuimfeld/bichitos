@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import ApiCall from "../helpers/ApiCall";
+import AddItemCart from "../helpers/AddItemCart";
 
-const AlimentosPerro = ({ cart, setCart }) => {
+const AlimentosPerro = ({ cart, setCart, getApiPerro }) => {
   const [alimentos, setAlimentos] = useState(null);
   const [raza, setRaza] = useState("Adulto raza grande");
 
   useEffect(() => {
-    ApiCall(setAlimentos, raza);
+    getApiPerro(setAlimentos, raza);
   }, [raza]);
 
   const handleClick = (e) => {
     setRaza(e.currentTarget.textContent);
   };
 
-  const handleSetCart = (e) => {
-    setCart([e]);
+  const handleSetCart = (e, index, cart, setCart) => {
+    AddItemCart(e, index, cart, setCart);
   };
 
   return (
@@ -46,7 +46,7 @@ const AlimentosPerro = ({ cart, setCart }) => {
                     <Card.Text>Peso: {alimento.attributes.kg}KG</Card.Text>
                     <Button
                       variant="primary"
-                      onClick={() => handleSetCart(alimento)}
+                      onClick={() => handleSetCart(alimento, cart, setCart)}
                     >
                       Agregar al carrito
                     </Button>
