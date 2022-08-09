@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import SendWhatsapp from "../helpers/SendWhatsapp";
 
 const Cart = ({ cart }) => {
@@ -62,11 +61,11 @@ const Cart = ({ cart }) => {
                   })}
                   <div className="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
                     <a
-                      href={`https://api.whatsapp.com/send/?phone=%2B5491144036816&text=${SendWhatsapp(
-                        cart,
-                        " %0a "
-                      )} %0a Ubicacion: %0a Abono en: &type=phone_number&app_absent=0`}
+                      href={`https://api.whatsapp.com/send/?phone=%2B5491144036816&text=
+                      ${SendWhatsapp(cart, "%0a")}
+                      Ubicacion: %0aAbono en: &type=phone_number&app_absent=0`}
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <button
                         className="btn btn-warning btn-block btn-lg ml-2 pay-button"
