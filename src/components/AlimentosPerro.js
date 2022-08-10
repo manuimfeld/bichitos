@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 import AddItemCart from "../helpers/AddItemCart";
 
 const AlimentosPerro = ({ cart, setCart, getApiPerro }) => {
@@ -9,6 +7,7 @@ const AlimentosPerro = ({ cart, setCart, getApiPerro }) => {
 
   useEffect(() => {
     getApiPerro(setAlimentos, raza);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [raza]);
 
   const handleClick = (e) => {
@@ -30,28 +29,38 @@ const AlimentosPerro = ({ cart, setCart, getApiPerro }) => {
             <button onClick={(e) => handleClick(e)}>Adulto raza grande</button>
             <button onClick={(e) => handleClick(e)}>Adulto raza pequeña</button>
           </div>
-          <div className="alimentos-container">
+
+          <div class="row row-alimentosperro">
             {alimentos.map((alimento) => {
               return (
-                <Card style={{ width: "18rem" }} key={alimento.id}>
-                  <Card.Img
-                    variant="top"
-                    src={alimento.attributes.imgURL}
-                    width="180"
-                    height="100"
-                  />
-                  <Card.Body>
-                    <Card.Title>{alimento.attributes.Nombre}</Card.Title>
-                    <Card.Text>{alimento.attributes.Precio}</Card.Text>
-                    <Card.Text>Peso: {alimento.attributes.kg}KG</Card.Text>
-                    <Button
-                      variant="primary"
-                      onClick={() => handleSetCart(alimento, cart, setCart)}
-                    >
-                      Agregar al carrito
-                    </Button>
-                  </Card.Body>
-                </Card>
+                <div className="col-sm-3" key={alimento.id}>
+                  <div className="thumb-wrapper">
+                    <span className="wish-icon">
+                      <i class="fa fa-heart-o"></i>
+                    </span>
+                    <div className="img-box">
+                      <img
+                        src={alimento.attributes.imgURL}
+                        className="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                    <div className="thumb-content">
+                      <h4>{alimento.attributes.Nombre}</h4>
+                      <p className="item-price">
+                        <strike>{alimento.attributes.Precio}</strike>{" "}
+                        <b>$369.00</b>
+                      </p>
+                      <a
+                        href="#a"
+                        className="btn btn-primary"
+                        onClick={() => handleSetCart(alimento, cart, setCart)}
+                      >
+                        Agregar al carrito
+                      </a>
+                    </div>
+                  </div>
+                </div>
               );
             })}
           </div>
