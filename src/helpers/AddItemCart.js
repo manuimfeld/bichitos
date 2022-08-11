@@ -1,5 +1,5 @@
 const AddItemCart = (item, cart, setCart) => {
-  let newArr = cart.filter((cartItem) => item.id !== cartItem.item.id);
+  let newArr = cart.filter((cartItem) => cartItem.item.id !== item.id);
   let cartItem = cart.find((itemFilter) => itemFilter.item.id === item.id);
 
   if (cartItem) {

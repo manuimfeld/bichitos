@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SendWhatsapp from "../helpers/SendWhatsapp";
+import RemoveItemCart from "../helpers/RemoveItemCart";
+import EditItemAmount from "../helpers/EditItemAmount";
+import CartTotalPrice from "../helpers/CartTotalPrice";
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, setCart }) => {
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    if (cart.length >= 0) {
+      setTotalPrice(CartTotalPrice(cart));
+    }
+  }, [cart]);
+
   return (
     <>
-      {cart === null ? (
-        <p>asd</p>
+      {cart.length === 0 ? (
+        <p>
+          El carrito está vacío, agrega algo y envíalo por Whatsapp para
+          coordinar la entrega y el pago
+        </p>
       ) : (
         <>
           <div className="container-cart">
@@ -15,7 +29,7 @@ const Cart = ({ cart }) => {
                   <div className="p-2">
                     <h4>Carrito</h4>
                   </div>
-                  {cart.map(({ item: alimento, cantidad }) => {
+                  {cart.map(({ item: alimento, cantidad }, index) => {
                     return (
                       <div
                         className="d-flex flex-row justify-content-between align-items-center p-2 bg-white mt-4 px-3 rounded"
@@ -42,11 +56,25 @@ const Cart = ({ cart }) => {
                           </div>
                         </div>
                         <div className="d-flex flex-row align-items-center qty">
-                          <i className="fa fa-minus text-danger"></i>
+                          <button
+                            className="button-amount"
+                            onClick={(e) =>
+                              EditItemAmount(e, cart, setCart, index)
+                            }
+                          >
+                            -
+                          </button>
                           <h5 className="text-grey mt-1 mr-1 ml-1">
                             {cantidad}
                           </h5>
-                          <i className="fa fa-plus text-success"></i>
+                          <button
+                            className="button-amount"
+                            onClick={(e) =>
+                              EditItemAmount(e, cart, setCart, index)
+                            }
+                          >
+                            +
+                          </button>
                         </div>
                         <div>
                           <h5 className="text-grey">
@@ -54,7 +82,14 @@ const Cart = ({ cart }) => {
                           </h5>
                         </div>
                         <div className="d-flex align-items-center">
-                          <i className="fa fa-trash mb-1 text-danger"></i>
+                          <i
+                            className="btn fa fa-trash mb-1 text-danger"
+                            onClick={() =>
+                              RemoveItemCart(cart, setCart, alimento, index)
+                            }
+                          >
+                            Eliminar
+                          </i>
                         </div>
                       </div>
                     );
@@ -62,8 +97,7 @@ const Cart = ({ cart }) => {
                   <div className="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
                     <a
                       href={`https://api.whatsapp.com/send/?phone=%2B5491144036816&text=
-                      ${SendWhatsapp(cart, "%0a ")}
-                      Ubicacion: %0a Abono en: &type=phone_number&app_absent=0`}
+                      ${SendWhatsapp(cart)}`}
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -74,6 +108,7 @@ const Cart = ({ cart }) => {
                         Comprar
                       </button>
                     </a>
+                    <span>Total: ${totalPrice}</span>
                   </div>
                 </div>
               </div>

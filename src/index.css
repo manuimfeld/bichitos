@@ -316,3 +316,14 @@ header, nav {
   overflow-x: hidden;
   margin: auto;
 }
+
+.button-amount {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  margin: 0 5px;
+  background: #e4e4e4;
+}

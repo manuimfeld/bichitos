@@ -1,13 +1,12 @@
-const SendWhatsapp = (cart, whiteSpace) => {
+const SendWhatsapp = (cart) => {
   let message = cart.map((item) => [
     item.cantidad,
     item.item.attributes.Nombre,
-    whiteSpace,
+    " ",
   ]);
 
   message = message.join("");
   message = message.replaceAll(",", " ");
-  console.log(message);
 
   return message;
 };
