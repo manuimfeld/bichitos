@@ -3,6 +3,7 @@ import SendWhatsapp from "../helpers/SendWhatsapp";
 import RemoveItemCart from "../helpers/RemoveItemCart";
 import EditItemAmount from "../helpers/EditItemAmount";
 import CartTotalPrice from "../helpers/CartTotalPrice";
+import { Link } from "react-router-dom";
 
 const Cart = ({ cart, setCart }) => {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -16,10 +17,14 @@ const Cart = ({ cart, setCart }) => {
   return (
     <>
       {cart.length === 0 ? (
-        <p>
-          El carrito está vacío, agrega algo y envíalo por Whatsapp para
-          coordinar la entrega y el pago
-        </p>
+        <div className="carrito-vacio">
+          <h1>El carrito está vacio</h1>
+          <p>Agregá algún producto y volvé para enviar la compra</p>
+          <Link to="/alimentos">Ver alimentos</Link>
+          <Link to="/varios">Ver varios</Link>
+          <Link to="/plantas">Ver plantas</Link>
+          <Link to="/agroquimicos">Ver agroquímicos</Link>
+        </div>
       ) : (
         <>
           <div className="container-cart">
@@ -94,7 +99,14 @@ const Cart = ({ cart, setCart }) => {
                       </div>
                     );
                   })}
-                  <div className="d-flex flex-row align-items-center mt-3 p-2 bg-white rounded">
+                </div>
+              </div>
+            </div>
+            <div className="container mt-5 mb-5">
+              <div className="d-flex justify-content-center row">
+                <div className="col-md-8">
+                  <div className="d-flex flex-column align-items-center p-2 bg-white rounded">
+                    <span>Total: ${totalPrice}</span>
                     <a
                       href={`https://api.whatsapp.com/send/?phone=%2B5491144036816&text=
                       ${SendWhatsapp(cart)}`}
@@ -105,10 +117,9 @@ const Cart = ({ cart, setCart }) => {
                         className="btn btn-warning btn-block btn-lg ml-2 pay-button"
                         type="button"
                       >
-                        Comprar
+                        Enviar compra
                       </button>
                     </a>
-                    <span>Total: ${totalPrice}</span>
                   </div>
                 </div>
               </div>

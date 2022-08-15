@@ -15,7 +15,7 @@ const Steps = () => {
         </article>
         <article>
           <img src={WhatsappImage} alt="" className="image-steps" />
-          <h2>Envíalo confirmando la compra</h2>
+          <h2>Envíanos el pedido haciendo un click</h2>
         </article>
         <article>
           <img src={DolarImage} alt="" className="image-steps" />
@@ -23,7 +23,7 @@ const Steps = () => {
         </article>
         <article>
           <img src={DeliveryImage} alt="" className="image-steps" />
-          <h2>Nosotros te lo llevamos en el mismo día</h2>
+          <h2>Te lo llevamos en el mismo día</h2>
         </article>
       </div>
     </>

@@ -4,31 +4,31 @@ import { Link } from "react-router-dom";
 const Category = () => {
   return (
     <>
-      <h2 className="h2-title">Productos de vivero y demás</h2>
+      <h2 className="h2-title">Productos</h2>
 
       <div className="card-category">
         <article>
           <Link to="/alimentos">
             <img src={require("../img/aliment.png")} alt="" />
-            <p>ALIMENTOS</p>
+            <p>VER ALIMENTOS</p>
           </Link>
         </article>
         <article>
           <Link to="/varios">
             <img src={require("../img/img_ropas-para-perros.png")} alt="" />
-            <p>VARIOS</p>
+            <p>VER VARIOS</p>
           </Link>
         </article>
         <article>
           <Link to="plantas">
             <img src={require("../img/plantas.png")} alt="" />
-            <p>PLANTAS</p>
+            <p>VER PLANTAS</p>
           </Link>
         </article>
         <article>
           <Link to="agroquimicos">
             <img src={require("../img/agroquim.png")} alt="" />
-            <p>AGROQUÍMICOS</p>
+            <p>VER AGROQUÍMICOS</p>
           </Link>
         </article>
       </div>

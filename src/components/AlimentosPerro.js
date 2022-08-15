@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AddItemCart from "../helpers/AddItemCart";
+import SweetAlert from "../helpers/SweetAlert";
 
 const AlimentosPerro = ({ cart, setCart, getApiPerro }) => {
   const [alimentos, setAlimentos] = useState(null);
@@ -16,6 +17,7 @@ const AlimentosPerro = ({ cart, setCart, getApiPerro }) => {
 
   const handleSetCart = (e, index, cart, setCart) => {
     AddItemCart(e, index, cart, setCart);
+    SweetAlert(e.attributes.Nombre);
   };
 
   return (
@@ -29,40 +31,40 @@ const AlimentosPerro = ({ cart, setCart, getApiPerro }) => {
             <button onClick={(e) => handleClick(e)}>Adulto raza grande</button>
             <button onClick={(e) => handleClick(e)}>Adulto raza pequeña</button>
           </div>
-
-          <div class="row row-alimentosperro">
-            {alimentos.map((alimento) => {
-              return (
-                <div className="col-sm-3" key={alimento.id}>
-                  <div className="thumb-wrapper">
-                    <span className="wish-icon">
-                      <i class="fa fa-heart-o"></i>
-                    </span>
-                    <div className="img-box">
-                      <img
-                        src={alimento.attributes.imgURL}
-                        className="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                    <div className="thumb-content">
-                      <h4>{alimento.attributes.Nombre}</h4>
-                      <p className="item-price">
-                        <strike>{alimento.attributes.Precio}</strike>{" "}
-                        <b>$369.00</b>
-                      </p>
-                      <a
-                        href="#a"
-                        className="btn btn-primary"
-                        onClick={() => handleSetCart(alimento, cart, setCart)}
-                      >
-                        Agregar al carrito
-                      </a>
+          <div className="container">
+            <div class="row row-alimentosperro">
+              {alimentos.map((alimento) => {
+                return (
+                  <div className="col-sm-3" key={alimento.id}>
+                    <div className="thumb-wrapper">
+                      <span className="wish-icon">
+                        <i class="fa fa-heart-o"></i>
+                      </span>
+                      <div className="img-box">
+                        <img
+                          src={alimento.attributes.imgURL}
+                          className="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div className="thumb-content">
+                        <h4>{alimento.attributes.Nombre}</h4>
+                        <p className="item-price">
+                          <b>${alimento.attributes.Precio} </b>
+                        </p>
+                        <a
+                          href="#a"
+                          className="btn btn-primary"
+                          onClick={() => handleSetCart(alimento, cart, setCart)}
+                        >
+                          Agregar al carrito
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </>
       )}
