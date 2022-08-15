@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import ApiAlimentoGato from "../helpers/ApiAlimentoGato";
-import Loading from "../Loading";
+import Loading from "./Loading";
 
 const AlimentosGato = ({ getApiGato }) => {
   const [alimentos, setAlimentos] = useState(null);

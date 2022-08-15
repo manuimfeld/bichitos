@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AddItemCart from "../helpers/AddItemCart";
 import SweetAlert from "../helpers/SweetAlert";
-import Loading from "../Loading";
+import Loading from "./Loading";
 
 const AlimentosPerro = ({ cart, setCart, getApiPerro }) => {
   const [alimentos, setAlimentos] = useState(null);
