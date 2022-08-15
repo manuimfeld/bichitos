@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AddItemCart from "../helpers/AddItemCart";
 import SweetAlert from "../helpers/SweetAlert";
+import Loading from "../components/Loading";
 
 const AlimentosPerro = ({ cart, setCart, getApiPerro }) => {
   const [alimentos, setAlimentos] = useState(null);
@@ -23,7 +24,7 @@ const AlimentosPerro = ({ cart, setCart, getApiPerro }) => {
   return (
     <>
       {alimentos === null ? (
-        <p>asd</p>
+        <Loading />
       ) : (
         <>
           <div className="options">

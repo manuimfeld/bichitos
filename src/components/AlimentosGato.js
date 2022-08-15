@@ -18,7 +18,7 @@ const AlimentosGato = ({ getApiGato }) => {
   return (
     <>
       {alimentos === null ? (
-        <p>asd</p>
+        <Loading />
       ) : (
         <>
           <div className="options">
