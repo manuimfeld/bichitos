@@ -1,6 +1,6 @@
 import React from "react";
 
-const AlimentosTop = () => {
+const Ofertas = () => {
   return (
     <>
       <h2 className="h2-title">Alimentos recomendados</h2>
@@ -11,7 +11,7 @@ const AlimentosTop = () => {
         </article>
         <article>
           <img src={require("../img/catchow.jpg")} alt="" />
-          <p>Catchow</p>
+          <p>Cat chow</p>
         </article>
         <article>
           <img src={require("../img/topnutrition.jpg")} alt="" />
@@ -19,11 +19,11 @@ const AlimentosTop = () => {
         </article>
         <article>
           <img src={require("../img/aliment.png")} alt="" />
-          <p>Dog selection</p>
+          <p>Ken-L</p>
         </article>
       </div>
     </>
   );
 };
 
-export default AlimentosTop;
+export default Ofertas;

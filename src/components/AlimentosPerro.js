@@ -2,13 +2,15 @@ import React, { useEffect, useState } from "react";
 import AddItemCart from "../helpers/AddItemCart";
 import SweetAlert from "../helpers/SweetAlert";
 import Loading from "./Loading";
+import ApiAlimentoPerro from "../helpers/ApiAlimentoPerro";
 
-const AlimentosPerro = ({ cart, setCart, getApiPerro }) => {
+const AlimentosPerro = ({ cart, setCart }) => {
   const [alimentos, setAlimentos] = useState(null);
-  const [raza, setRaza] = useState("Adulto raza grande");
+  const [raza, setRaza] = useState("Cachorro");
+  const [activeButton, setActiveButton] = useState("first");
 
   useEffect(() => {
-    getApiPerro(setAlimentos, raza);
+    ApiAlimentoPerro(setAlimentos, raza);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [raza]);
 
@@ -28,9 +30,33 @@ const AlimentosPerro = ({ cart, setCart, getApiPerro }) => {
       ) : (
         <>
           <div className="options">
-            <button onClick={(e) => handleClick(e)}>Cachorro</button>
-            <button onClick={(e) => handleClick(e)}>Adulto raza grande</button>
-            <button onClick={(e) => handleClick(e)}>Adulto raza pequeña</button>
+            <button
+              onClick={(e) => {
+                handleClick(e);
+                setActiveButton("first");
+              }}
+              className={activeButton === "first" ? "activeButton" : ""}
+            >
+              Cachorro
+            </button>
+            <button
+              onClick={(e) => {
+                handleClick(e);
+                setActiveButton("second");
+              }}
+              className={activeButton === "second" ? "activeButton" : ""}
+            >
+              Adulto raza grande
+            </button>
+            <button
+              onClick={(e) => {
+                handleClick(e);
+                setActiveButton("third");
+              }}
+              className={activeButton === "third" ? "activeButton" : ""}
+            >
+              Adulto raza pequeña
+            </button>
           </div>
           <div className="container">
             <div class="row row-alimentosperro">

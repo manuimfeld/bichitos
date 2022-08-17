@@ -1,5 +1,5 @@
 import React from "react";
-import AlimentosTop from "../components/AlimentosTop";
+import Ofertas from "../components/Ofertas";
 import CarouselHome from "../components/CarouselHome";
 import Category from "../components/Category";
 import Steps from "../components/Steps";
@@ -10,7 +10,7 @@ const Home = () => {
       <main>
         <section className="main">
           <CarouselHome />
-          <AlimentosTop />
+          <Ofertas />
         </section>
         <section className="category">
           <Category />

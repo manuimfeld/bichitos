@@ -13,7 +13,7 @@ import PlantasExterior from "../components/PlantasExterior";
 import Agroquimicos from "../components/Agroquimicos";
 import Cart from "../pages/Cart";
 
-const PrincipalRouter = ({ cart, setCart, getApiPerro, getApiGato }) => {
+const PrincipalRouter = ({ cart, setCart }) => {
   return (
     <>
       <BrowserRouter>
@@ -24,23 +24,11 @@ const PrincipalRouter = ({ cart, setCart, getApiPerro, getApiGato }) => {
           <Route path="/alimentos" element={<Alimentos />} />
           <Route
             path="/alimentos/perros"
-            element={
-              <AlimentosPerro
-                cart={cart}
-                setCart={setCart}
-                getApiPerro={getApiPerro}
-              />
-            }
+            element={<AlimentosPerro cart={cart} setCart={setCart} />}
           />
           <Route
             path="/alimentos/gatos"
-            element={
-              <AlimentosGato
-                cart={cart}
-                setCart={setCart}
-                getApiGato={getApiGato}
-              />
-            }
+            element={<AlimentosGato cart={cart} setCart={setCart} />}
           />
           <Route path="/varios" element={<Varios />} />
 

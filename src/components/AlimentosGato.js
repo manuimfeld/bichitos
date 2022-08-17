@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from "react";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+import AddItemCart from "../helpers/AddItemCart";
 import ApiAlimentoGato from "../helpers/ApiAlimentoGato";
+import SweetAlert from "../helpers/SweetAlert";
 import Loading from "./Loading";
 
-const AlimentosGato = ({ getApiGato }) => {
+const AlimentosGato = ({ cart, setCart }) => {
   const [alimentos, setAlimentos] = useState(null);
   const [raza, setRaza] = useState("Bebe");
+  const [activeButton, setActiveButton] = useState("first");
 
   useEffect(() => {
-    getApiGato(setAlimentos, raza);
+    ApiAlimentoGato(setAlimentos, raza);
   }, [raza]);
 
   const handleClick = (e) => {
     setRaza(e.currentTarget.textContent);
+  };
+
+  const handleSetCart = (e, index, cart, setCart) => {
+    AddItemCart(e, index, cart, setCart);
+    SweetAlert(e.attributes.Nombre);
   };
 
   return (
@@ -23,34 +29,68 @@ const AlimentosGato = ({ getApiGato }) => {
       ) : (
         <>
           <div className="options">
-            <button onClick={(e) => handleClick(e)}>Bebe</button>
-            <button onClick={(e) => handleClick(e)}>Adulto</button>
-            <button onClick={(e) => handleClick(e)}>Urinary</button>
+            <button
+              onClick={(e) => {
+                handleClick(e);
+                setActiveButton("first");
+              }}
+              className={activeButton === "first" ? "activeButton" : ""}
+            >
+              Bebe
+            </button>
+            <button
+              onClick={(e) => {
+                handleClick(e);
+                setActiveButton("second");
+              }}
+              className={activeButton === "second" ? "activeButton" : ""}
+            >
+              Adulto
+            </button>
+            <button
+              onClick={(e) => {
+                handleClick(e);
+                setActiveButton("third");
+              }}
+              className={activeButton === "third" ? "activeButton" : ""}
+            >
+              Urinary
+            </button>
           </div>
-          <div className="alimentos-container">
-            {alimentos.map((alimento) => {
-              return (
-                <Card style={{ width: "18rem" }} key={alimento.id}>
-                  <Card.Img
-                    variant="top"
-                    src={alimento.attributes.imgURL}
-                    width="180"
-                    height="100"
-                  />
-                  <Card.Body>
-                    <Card.Title>{alimento.attributes.Nombre}</Card.Title>
-                    <Card.Text>{alimento.attributes.Precio}</Card.Text>
-                    <Card.Text>Peso: {alimento.attributes.kg}KG</Card.Text>
-                    <Button
-                      variant="primary"
-                      onClick={() => handleClick(alimento)}
-                    >
-                      Agregar al carrito
-                    </Button>
-                  </Card.Body>
-                </Card>
-              );
-            })}
+          <div className="container">
+            <div class="row row-alimentosperro">
+              {alimentos.map((alimento) => {
+                return (
+                  <div className="col-sm-3" key={alimento.id}>
+                    <div className="thumb-wrapper">
+                      <span className="wish-icon">
+                        <i class="fa fa-heart-o"></i>
+                      </span>
+                      <div className="img-box">
+                        <img
+                          src={alimento.attributes.imgURL}
+                          className="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                      <div className="thumb-content">
+                        <h4>{alimento.attributes.Nombre}</h4>
+                        <p className="item-price">
+                          <b>${alimento.attributes.Precio} </b>
+                        </p>
+                        <a
+                          href="#a"
+                          className="btn btn-primary"
+                          onClick={() => handleSetCart(alimento, cart, setCart)}
+                        >
+                          Agregar al carrito
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </>
       )}

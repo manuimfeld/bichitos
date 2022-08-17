@@ -37,6 +37,12 @@ section {
   width: 100vw;
 }
 
+
+
+
+
+
+/*-------------- HEADER COMPONENT --------------*/
 header, nav {
   position: sticky!important;
   top: 0!important;
@@ -50,6 +56,14 @@ header, nav {
   font-weight: 800;
 }
 
+
+
+
+
+
+
+
+/*-------------- MAIN SECTION --------------*/
 .main {
   min-height: 100vh;
   width: 100vw;
@@ -64,6 +78,13 @@ header, nav {
   margin-top: 40px;
 }
 
+
+
+
+
+
+
+/*-------------- OFERTAS COMPONENT --------------*/
 .alimentos-top-container {
   height: 40vh;
   display: flex;
@@ -87,6 +108,14 @@ header, nav {
   margin: 0 auto;
 }
 
+
+
+
+
+
+
+
+/*-------------- CATEGORY SECTION --------------*/
 .category {
   min-height: 100vh;
   width: 100vw;
@@ -125,6 +154,14 @@ header, nav {
   top: 50%; width: 100%; text-align: center;
 }
 
+
+
+
+
+
+
+
+/*-------------- STEPS SECTION --------------*/
 .steps-container {
   min-height: 30vw;
   width: 100vw;
@@ -181,6 +218,15 @@ header, nav {
   top: 40%;
 }
 
+
+
+
+
+
+
+
+
+/*-------------- ALIMENTOS/PLANTAS/VARIOS/AGROQUIMICOS ITEMS RENDER COMPONENT --------------*/
 .options {
   width: 100vw;
   height: auto;
@@ -197,15 +243,20 @@ header, nav {
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-weight: 500;
-  color: #000;
-  background-color: #c7c7c7;
-  border: none;
+  color: #0D6EFD;
+  background-color: #fff;
+  border: 1px solid #0D6EFD;
   border-radius: 45px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
   margin: 5px 10px;
+}
+
+.activeButton {
+  color: #fff!important;
+  background-color: #0D6EFD!important;
 }
 
 .item {
@@ -311,8 +362,14 @@ header, nav {
   margin: 20px 0;
 }
 
-/* CART*/
 
+
+
+
+
+
+
+/*-------------- CART SECTION --------------*/
 .cart-container {
   width: 100vw;
   min-height: 100vh;
@@ -370,6 +427,13 @@ header, nav {
   text-decoration: none;
 }
 
+
+
+
+
+
+
+/*-------------- LOADING SPINNER --------------*/
 .lds-ellipsis {
   display: inline-block;
   position: relative;
