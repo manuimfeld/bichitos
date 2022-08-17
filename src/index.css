@@ -489,3 +489,38 @@ header, nav {
     transform: translate(24px, 0);
   }
 }
+
+
+/*------------ MEDIA QUERIES ------------*/
+
+@media (min-width: 768px) {
+  .alimentos-top-container {
+    justify-content: center;
+  }
+
+  .alimentos-top-container article {
+    flex: 0 0 20%;
+    border-radius: 20px;
+  }
+
+  .alimentos-top-container article img {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+
+  .card-category {
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 70vh!important;
+  }
+
+  .card-category article {
+    flex: 0 0 40%;
+    margin: 20px auto;
+    height: 35vh;
+  }
+
+  .card-category article img {
+    height: 35vh;
+  }
+}
