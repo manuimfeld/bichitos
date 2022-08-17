@@ -10,14 +10,17 @@ const AlimentosGato = ({ cart, setCart }) => {
   const [activeButton, setActiveButton] = useState("first");
 
   useEffect(() => {
+    /* Llamo a la API y seteo la información que trae en el State de alimentos  */
     ApiAlimentoGato(setAlimentos, raza);
   }, [raza]);
 
-  const handleClick = (e) => {
+  const handleSetRaza = (e) => {
+    /* Seteo qué raza se va a buscar al llamar a la Api en el useEffect */
     setRaza(e.currentTarget.textContent);
   };
 
   const handleSetCart = (e, index, cart, setCart) => {
+    /* Agrego un item al carrito y muestro una alerta avisando que se agregó correctamente */
     AddItemCart(e, index, cart, setCart);
     SweetAlert(e.attributes.Nombre);
   };
@@ -31,7 +34,7 @@ const AlimentosGato = ({ cart, setCart }) => {
           <div className="options">
             <button
               onClick={(e) => {
-                handleClick(e);
+                handleSetRaza(e);
                 setActiveButton("first");
               }}
               className={activeButton === "first" ? "activeButton" : ""}
@@ -40,7 +43,7 @@ const AlimentosGato = ({ cart, setCart }) => {
             </button>
             <button
               onClick={(e) => {
-                handleClick(e);
+                handleSetRaza(e);
                 setActiveButton("second");
               }}
               className={activeButton === "second" ? "activeButton" : ""}
@@ -49,7 +52,7 @@ const AlimentosGato = ({ cart, setCart }) => {
             </button>
             <button
               onClick={(e) => {
-                handleClick(e);
+                handleSetRaza(e);
                 setActiveButton("third");
               }}
               className={activeButton === "third" ? "activeButton" : ""}

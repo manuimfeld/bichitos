@@ -3,7 +3,7 @@ import React from "react";
 const Ofertas = () => {
   return (
     <>
-      <h2 className="h2-title">Alimentos recomendados</h2>
+      <h2 className="h2-title">Alimentos en oferta</h2>
       <div className="alimentos-top-container">
         <article>
           <img src={require("../img/aliment.png")} alt="" />

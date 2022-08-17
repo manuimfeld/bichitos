@@ -10,15 +10,17 @@ const AlimentosPerro = ({ cart, setCart }) => {
   const [activeButton, setActiveButton] = useState("first");
 
   useEffect(() => {
+    /* Llamo a la API y seteo la información que trae en el State de alimentos  */
     ApiAlimentoPerro(setAlimentos, raza);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [raza]);
 
   const handleClick = (e) => {
+    /* Seteo qué raza se va a buscar al llamar a la Api en el useEffect */
     setRaza(e.currentTarget.textContent);
   };
 
   const handleSetCart = (e, index, cart, setCart) => {
+    /* Agrego un item al carrito y muestro una alerta avisando que se agregó correctamente */
     AddItemCart(e, index, cart, setCart);
     SweetAlert(e.attributes.Nombre);
   };
