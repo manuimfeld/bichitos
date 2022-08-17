@@ -12,11 +12,11 @@ const Home = () => {
           <CarouselHome />
           <Ofertas />
         </section>
-        <section className="category">
-          <Category />
-        </section>
         <section className="steps">
           <Steps />
+        </section>
+        <section className="category">
+          <Category />
         </section>
       </main>
     </>

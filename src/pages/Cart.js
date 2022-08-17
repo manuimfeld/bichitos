@@ -1,9 +1,11 @@
+/* eslint-disable react/style-prop-object */
 import React, { useEffect, useState } from "react";
 import SendWhatsapp from "../helpers/SendWhatsapp";
 import RemoveItemCart from "../helpers/RemoveItemCart";
 import EditItemAmount from "../helpers/EditItemAmount";
 import CartTotalPrice from "../helpers/CartTotalPrice";
 import { Link } from "react-router-dom";
+import Category from "../components/Category";
 
 const Cart = ({ cart, setCart }) => {
   const [totalPrice, setTotalPrice] = useState(0);
@@ -20,10 +22,7 @@ const Cart = ({ cart, setCart }) => {
         <div className="carrito-vacio">
           <h1>El carrito está vacio</h1>
           <p>Agregá algún producto y volvé para enviar la compra</p>
-          <Link to="/alimentos">Ver alimentos</Link>
-          <Link to="/varios">Ver varios</Link>
-          <Link to="/plantas">Ver plantas</Link>
-          <Link to="/agroquimicos">Ver agroquímicos</Link>
+          <Category />
         </div>
       ) : (
         <>
