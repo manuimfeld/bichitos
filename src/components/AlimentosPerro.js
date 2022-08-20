@@ -61,13 +61,13 @@ const AlimentosPerro = ({ cart, setCart }) => {
             </button>
           </div>
           <div className="container">
-            <div class="row row-alimentosperro">
+            <div className="row row-alimentosperro">
               {alimentos.map((alimento) => {
                 return (
                   <div className="col-sm-3" key={alimento.id}>
                     <div className="thumb-wrapper">
                       <span className="wish-icon">
-                        <i class="fa fa-heart-o"></i>
+                        <i className="fa fa-heart-o"></i>
                       </span>
                       <div className="img-box">
                         <img

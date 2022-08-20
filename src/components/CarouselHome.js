@@ -8,7 +8,7 @@ const CarouselHome = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={ThreeImgCarousel}
+          src="https://www.terrazasdemayo.com.ar/images/imagenes/76/nutrican_local.jpg"
           alt="Third slide"
         />
       </Carousel.Item>

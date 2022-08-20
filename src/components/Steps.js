@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Steps = () => {
   return (
     <>
-      <h2 className="h2-title">Comprá en 4 pasos</h2>
+      <h2 className="title-section">Comprá en 4 pasos</h2>
       <div className="steps-container">
         <article>
           <a href="#category">

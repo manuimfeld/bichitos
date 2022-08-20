@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 const Category = () => {
   return (
     <>
-      <h2 className="h2-title" id="category">
-        Productos
-      </h2>
+      <h2 className="title-section">Productos</h2>
 
       <div className="card-category">
         <article>

@@ -74,9 +74,12 @@ header, nav {
   height: 40vh;
 }
 
-.h2-title {
+.title-section {
   text-align: center;
   margin-top: 40px;
+  color: #0D6EFD;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 20px;
 }
 
 
@@ -87,16 +90,30 @@ header, nav {
 
 /*-------------- OFERTAS COMPONENT --------------*/
 .alimentos-top-container {
-  height: 40vh;
+  height: 60vh;
+  width: 80vw;
   display: flex;
   overflow-x: auto;
+  margin: 0 auto;
 }
 
 .alimentos-top-container article {
   flex: 0 0 50%;
+  margin: 0 auto;
+  transition: all 400ms;
+}
+
+.alimentos-top-container article:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.alimentos-top-container article a {
   display: flex;
   flex-direction: column;
-  margin: 0 15px;
+  height: 100%;
+  width: auto;
+  overflow-x: auto;
 }
 
 .alimentos-top-container article img {
@@ -105,8 +122,10 @@ header, nav {
   object-fit: cover;
 }
 
-.alimentos-top-container article p {
+.alimentos-top-container article a p {
   margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
 }
 
 
@@ -505,12 +524,12 @@ header, nav {
     justify-content: center;
   }
 
-  .alimentos-top-container article {
+  .alimentos-top-container article{
     flex: 0 0 20%;
     border-radius: 20px;
   }
 
-  .alimentos-top-container article img {
+  .alimentos-top-container article a img {
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
   }

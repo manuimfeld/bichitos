@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const ApiCall = (setState, raza) => {
-  const endpoint = `http://167.172.132.11:1337/api/alimentos?filters[Raza][$eq]=Gato: ${raza}`;
+  const endpoint = `https://bichitos.herokuapp.com/api/alimentos?filters[Raza][$eq]=Gato: ${raza}`;
   axios
     .get(endpoint)
     .then((res) => {
