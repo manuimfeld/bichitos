@@ -29,12 +29,6 @@ const Header = ({ cart }) => {
             <Nav.Link as={Link} to="/varios" className="text-white">
               Varios
             </Nav.Link>
-            <Nav.Link as={Link} to="/plantas" className="text-white">
-              Plantas
-            </Nav.Link>
-            <Nav.Link as={Link} to="/agroquimicos" className="text-white">
-              Agroquimicos
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

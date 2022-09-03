@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 const Category = () => {
   return (
     <>
-      <h2 className="title-section">Productos</h2>
+      <h2 className="title-section" id="category">
+        Productos
+      </h2>
 
       <div className="card-category">
         <article>
@@ -17,18 +19,6 @@ const Category = () => {
           <Link to="/varios">
             <img src={require("../img/img_ropas-para-perros.png")} alt="" />
             <p>VER VARIOS</p>
-          </Link>
-        </article>
-        <article>
-          <Link to="plantas">
-            <img src={require("../img/plantas.png")} alt="" />
-            <p>VER PLANTAS</p>
-          </Link>
-        </article>
-        <article>
-          <Link to="agroquimicos">
-            <img src={require("../img/agroquim.png")} alt="" />
-            <p>VER AGROQUÍMICOS</p>
           </Link>
         </article>
       </div>

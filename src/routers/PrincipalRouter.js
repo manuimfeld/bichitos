@@ -7,10 +7,6 @@ import Alimentos from "../components/Alimentos";
 import AlimentosPerro from "../components/AlimentosPerro";
 import AlimentosGato from "../components/AlimentosGato";
 import Varios from "../components/Varios";
-import Plantas from "../components/Plantas";
-import PlantasInterior from "../components/PlantasInterior";
-import PlantasExterior from "../components/PlantasExterior";
-import Agroquimicos from "../components/Agroquimicos";
 import Cart from "../pages/Cart";
 
 const PrincipalRouter = ({ cart, setCart }) => {
@@ -31,11 +27,6 @@ const PrincipalRouter = ({ cart, setCart }) => {
             element={<AlimentosGato cart={cart} setCart={setCart} />}
           />
           <Route path="/varios" element={<Varios />} />
-
-          <Route path="/plantas" element={<Plantas />} />
-          <Route path="/plantas/interior" element={<PlantasInterior />} />
-          <Route path="/plantas/exterior" element={<PlantasExterior />} />
-          <Route path="/agroquimicos" element={<Agroquimicos />} />
           <Route
             path="/carrito"
             element={<Cart cart={cart} setCart={setCart} />}
