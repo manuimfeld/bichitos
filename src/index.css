@@ -294,7 +294,7 @@ footer h3 {
   width: 100%;
   height: auto;
   background: none;
-  border: 1px solid blue;
+  border: 1px solid var(--main-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -302,6 +302,7 @@ footer h3 {
 
 .container-filters .filters-menu p {
   text-transform: uppercase;
+  color: var(--main-color);
 }
 
 .container-filters .filters {
@@ -316,22 +317,29 @@ footer h3 {
 
 .filter {
   margin: 5px 5px;
-  height: 20px;
+  height: 25px;
   width: auto;
-  border: 1px solid blue;
+  border: 1px solid var(--main-color);
+  background: #FFFFFF;
   display: flex;
   align-items: center;
-  padding: 5px;
+  border-radius: 3px;
 }
 
 .filter p {
   display: inline-block;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
-  margin-right: 5px;
+  margin: 10px;
 }
 
-
+.filter button {
+  height: 100%;
+  padding: 0 10px;
+  background: var(--main-color);
+  border: none;
+  color: #FFFFFF;
+}
 
 
 
