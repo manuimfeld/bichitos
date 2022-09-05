@@ -260,3 +260,147 @@ footer {
 footer h3 {
   color: var(--main-color);
 }
+
+
+
+
+
+
+/* FILTERSMENU COMPONENT */
+
+.section-products {
+  width: calc(100vw - 20px);
+  min-height: 50vh;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.products {
+  width: 100%;
+  min-height: 30vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.container-filters {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.container-filters .filters-menu{
+  width: 100%;
+  height: auto;
+  background: none;
+  border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-filters .filters-menu p {
+  text-transform: uppercase;
+}
+
+.container-filters .filters {
+  margin-top: 20px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.filter {
+  margin: 5px 5px;
+  height: 20px;
+  width: auto;
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.filter p {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 300;
+  margin-right: 5px;
+}
+
+
+
+
+
+/* PRODUCTS COMPONENT */
+.container-products {
+  height: auto;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.container-products article {
+  width: 100%;
+  height: auto;
+  margin: 0 auto 20px 0;
+  background: #FFFFFF;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 10px;
+  padding: 0px 0 20px 0;
+}
+
+.container-products article img {
+  width: 30%;
+  height: 40%;
+  border-radius: 10px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info p {
+  width: fit-content;
+}
+
+.product-info :nth-child(1) {
+  color: #6e6a6a;
+  text-transform: uppercase;
+  margin: 15px 0 10px 0;
+}
+
+.product-info :nth-child(2) {
+  margin: 0 0 10px 0;
+}
+
+.product-info :nth-child(3) {
+  padding: 5px 15px;
+  margin: 20px 0;
+  background: var(--main-color);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+}
+
+.product-info :nth-child(4) {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.product-info button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background: green;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 400;
+}
+
