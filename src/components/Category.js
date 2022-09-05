@@ -1,28 +1,28 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Category = () => {
   return (
-    <>
-      <h2 className="title-section" id="category">
-        Productos
-      </h2>
-
-      <div className="card-category">
+    <section className="section-category">
+      <h2>Comprá por categoría</h2>
+      <div className="category">
         <article>
-          <Link to="/alimentos">
-            <img src={require("../img/aliment.png")} alt="" />
-            <p>VER ALIMENTOS</p>
-          </Link>
+          <img
+            src="https://clublatablada.com.ar/wp-content/uploads/2019/11/Top-1.png"
+            alt=""
+          />
+          <p>Alimentos</p>
+          <button>Ver todos</button>
         </article>
         <article>
-          <Link to="/varios">
-            <img src={require("../img/img_ropas-para-perros.png")} alt="" />
-            <p>VER VARIOS</p>
-          </Link>
+          <img
+            src="https://clublatablada.com.ar/wp-content/uploads/2019/11/Top-1.png"
+            alt=""
+          />
+          <p>Juguetes y Snacks</p>
+          <button>Ver todos</button>
         </article>
       </div>
-    </>
+    </section>
   );
 };
 
