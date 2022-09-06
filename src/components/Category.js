@@ -21,6 +21,14 @@ const Category = () => {
           <p>Juguetes y Snacks</p>
           <button>Ver todos</button>
         </article>
+        <article>
+          <img
+            src="https://clublatablada.com.ar/wp-content/uploads/2019/11/Top-1.png"
+            alt=""
+          />
+          <p>Juguetes y Snacks</p>
+          <button>Ver todos</button>
+        </article>
       </div>
     </section>
   );

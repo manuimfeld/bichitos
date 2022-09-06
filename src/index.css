@@ -122,7 +122,7 @@ main .carousel{
 .section-trade-marks {
   width: calc(100vw - 20px);
   min-height: 50vh;
-  padding: 0 10px;
+  padding: 0px 10px 50px 10px;
   text-align: center;
 }
 
@@ -171,7 +171,7 @@ main .carousel{
 }
 
 .section-category h2 {
-  margin: 25px 0 15px 0;
+  margin: 0 0 15px 0;
   color: #FFFFFF;
   font-weight: 500;
 }
@@ -412,3 +412,51 @@ footer h3 {
   font-weight: 400;
 }
 
+
+
+
+
+
+
+/* MEDIA QUERYS */
+
+@media (min-width: 600px) {
+
+  .trade-marks article {
+    width: 30%;
+    border-radius: 5px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section-trade-marks {
+    width: calc(90vw - 10vw);
+    margin: 0 auto 50px auto;
+  }
+
+
+  .trade-marks article {
+    width: 20%;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .section-category {
+    width: calc(100vw - 20vw);
+    padding: 0 10vw 25px 10vw;
+    margin: 0 auto 50px auto;
+  }
+
+  .section-category h2 {
+    padding-top: 25px;
+  }
+
+  .category {
+    width: calc(100vw - 20vw);
+  }
+
+  .category article {
+    width: calc(30%);
+    height: 150px;
+  }
+}
