@@ -1,20 +1,26 @@
 import React from "react";
 
-const Product = () => {
+const Product = ({ products }) => {
   return (
-    <article>
-      <img
-        src="https://animall.com.ar/5651-thickbox_default/royal-canin-mini-adult-x-75-kg.webp"
-        alt=""
-      />
-      <div className="product-info">
-        <p>Royal Canin</p>
-        <p>Mini adulto</p>
-        <p>25kg</p>
-        <p>$15.000</p>
-        <button>Comprar</button>
-      </div>
-    </article>
+    <div className="container-products">
+      {products.map((product) => {
+        return (
+          <article key={product.id}>
+            <img
+              src={`http://192.168.0.70:1337${product.attributes.Imagen.data.attributes.url}`}
+              alt=""
+            />
+            <div className="product-info">
+              <p>{product.attributes.marca.data.attributes.Nombre}</p>
+              <p>{product.attributes.Nombre}</p>
+              <p>{product.attributes.Kg} KG</p>
+              <p>${product.attributes.Precio}</p>
+              <button>Comprar</button>
+            </div>
+          </article>
+        );
+      })}
+    </div>
   );
 };
 

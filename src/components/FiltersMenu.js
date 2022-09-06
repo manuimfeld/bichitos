@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
 
 const FiltersMenu = () => {
   return (
@@ -8,22 +7,10 @@ const FiltersMenu = () => {
         <p>Filtrar</p>
       </div>
       <div className="filters">
-        <div className="filter">
+        <article className="filter">
           <p>Royal Cannin</p>
           <button>x</button>
-        </div>
-        <div className="filter">
-          <p>Perro</p>
-          <button>x</button>
-        </div>
-        <div className="filter">
-          <p>Adulto</p>
-          <button>x</button>
-        </div>
-        <div className="filter">
-          <p>Raza pequeña</p>
-          <button>x</button>
-        </div>
+        </article>
       </div>
     </div>
   );
