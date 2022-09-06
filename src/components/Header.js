@@ -15,7 +15,7 @@ const Header = () => {
     <header>
       <nav>
         <ul>
-          <li>
+          <li onClick={() => navigate("/carrito")}>
             <img src={menu} alt="" />
           </li>
           <li>

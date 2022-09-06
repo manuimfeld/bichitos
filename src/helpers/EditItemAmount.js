@@ -1,6 +1,7 @@
-const EditItemAmount = (e, cart, setCart, index) => {
+const editItemAmount = (e, cart, setCart, index) => {
   let cartArr = [...cart];
   let text = e.currentTarget.textContent;
+  console.log(text);
 
   if (text === "-" && cartArr[index].cantidad > 1) {
     cartArr[index].cantidad -= 1;
@@ -11,4 +12,4 @@ const EditItemAmount = (e, cart, setCart, index) => {
   }
 };
 
-export default EditItemAmount;
+export default editItemAmount;

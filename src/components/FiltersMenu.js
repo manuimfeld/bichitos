@@ -7,10 +7,10 @@ const FiltersMenu = () => {
         <p>Filtrar</p>
       </div>
       <div className="filters">
-        <article className="filter">
+        {/* <article className="filter">
           <p>Royal Cannin</p>
           <button>x</button>
-        </article>
+        </article> */}
       </div>
     </div>
   );

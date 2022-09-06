@@ -3,26 +3,19 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import FiltersMenu from "./FiltersMenu";
 import Product from "./Product";
+import apiProducts from "../helpers/apiProducts";
 
-const Products = () => {
+const Products = ({ cart, setCart }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const endpoint = "http://192.168.0.70:1337/api/productos?populate=*";
-    axios
-      .get(endpoint)
-      .then((res) => {
-        setProducts(res.data.data);
-      })
-      .catch((err) => {
-        setProducts(err);
-      });
+    apiProducts(setProducts);
   }, []);
 
   return (
     <section className="section-products">
       <FiltersMenu />
-      <Product products={products} />
+      <Product products={products} cart={cart} setCart={setCart} />
     </section>
   );
 };

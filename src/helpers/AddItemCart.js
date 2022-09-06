@@ -1,16 +1,18 @@
-const AddItemCart = (item, cart, setCart) => {
-  let newArr = cart.filter((cartItem) => cartItem.item.id !== item.id);
-  let cartItem = cart.find((itemFilter) => itemFilter.item.id === item.id);
+const AddproductCart = (product, cart, setCart) => {
+  let newArr = cart.filter((cartproduct) => cartproduct.id !== product.id);
+  let cartproduct = cart.find(
+    (productFilter) => productFilter.id === product.id
+  );
 
-  if (cartItem) {
-    let newCartItem = {
-      ...cartItem,
-      cantidad: cartItem.cantidad + 1,
+  if (cartproduct) {
+    let newCartproduct = {
+      ...cartproduct,
+      cantidad: cartproduct.cantidad + 1,
     };
-    setCart([...newArr, newCartItem]);
+    setCart([...newArr, newCartproduct]);
   } else {
-    setCart([...cart, { item, cantidad: 1 }]);
+    setCart([...cart, { ...product, cantidad: 1 }]);
   }
 };
 
-export default AddItemCart;
+export default AddproductCart;

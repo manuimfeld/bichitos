@@ -1,8 +1,8 @@
-const CartTotalPrice = (cart) => {
+const cartTotalPrice = (cart) => {
   return cart.reduce(
-    (prev, curr) => prev + curr.item.attributes.Precio * curr.cantidad,
+    (prev, curr) => prev + curr.attributes.Precio * curr.cantidad,
     0
   );
 };
 
-export default CartTotalPrice;
+export default cartTotalPrice;
