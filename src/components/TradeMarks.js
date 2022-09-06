@@ -1,34 +1,20 @@
 import React from "react";
 
-const TradeMarks = () => {
+const TradeMarks = ({ tradeMarks }) => {
   return (
     <section className="section-trade-marks">
       <p>Seleccioná tu marca</p>
       <div className="trade-marks">
-        <article>
-          <img
-            src="https://clublatablada.com.ar/wp-content/uploads/2019/11/Top-1.png"
-            alt=""
-          />
-        </article>
-        <article>
-          <img
-            src="https://clublatablada.com.ar/wp-content/uploads/2019/11/Top-1.png"
-            alt=""
-          />
-        </article>
-        <article>
-          <img
-            src="https://clublatablada.com.ar/wp-content/uploads/2019/11/Top-1.png"
-            alt=""
-          />
-        </article>
-        <article>
-          <img
-            src="https://clublatablada.com.ar/wp-content/uploads/2019/11/Top-1.png"
-            alt=""
-          />
-        </article>
+        {tradeMarks.map((marks) => {
+          return (
+            <article key={marks.id}>
+              <img
+                src={`http://192.168.0.70:1337${marks.attributes.Imagen.data.attributes.url}`}
+                alt=""
+              />
+            </article>
+          );
+        })}
       </div>
     </section>
   );
