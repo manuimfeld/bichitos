@@ -10,6 +10,7 @@
   min-height: 100vh;
   scroll-behavior: smooth;
   --main-color: #FF9800;
+  --font: "Roboto", sans-serif;
 }
 
 body {
@@ -37,6 +38,7 @@ header {
   background: var(--main-color);
   position: sticky;
   top: 0;
+  z-index: 5;
 }
 
 header nav {
@@ -124,10 +126,13 @@ main .carousel{
   min-height: 50vh;
   padding: 0px 10px 50px 10px;
   text-align: center;
+
 }
 
-.section-trade-marks p {
+.section-trade-marks h1 {
   margin: 25px 0;
+  color: var(--main-color);
+  
 }
 
 .trade-marks {
@@ -165,7 +170,7 @@ main .carousel{
 .section-category {
   width: calc(100vw - 20px);
   height: auto;
-  padding: 10px;
+  padding: 30px 10px;
   text-align: center;
   background: var(--main-color);
 }
@@ -189,6 +194,8 @@ main .carousel{
   background: #FFFFFF;
   margin-bottom: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 3px;
+  text-align: center;
 }
 
 .category article img {
@@ -198,8 +205,10 @@ main .carousel{
 }
 
 .section-category article p {
-  margin: 0 0 5px 0;
+  margin: 0 auto 10px auto;
   color: var(--main-color);
+  width: 90%;
+  font-size: 14px;
 }
 
 .section-category article button {
@@ -207,7 +216,16 @@ main .carousel{
   padding: 10px 15px;
   background: #FFFFFF;
   color: var(--main-color);
+  text-transform: uppercase;
+  transition: all 300ms ease-out;
 }
+
+.section-category article button:hover {
+  color: #FFFFFF;
+  background: var(--main-color);
+}
+
+
 
 
 
@@ -217,20 +235,30 @@ main .carousel{
 
 .section-questions {
   width: 100vw;
-  height: 50vh;
+  min-height: 50vh;
   text-align: center;
   background: #FFFFFF
 }
 
 .section-questions article {
   width: 100vw;
-  height: 50%;
-  padding: 10px 0;
+  height: auto;
+  padding: 30px 0;
   color: var(--main-color);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   border-bottom: 1px solid #979595;
+}
+
+.section-questions article img {
+  width: 20%;
+  height: 20%;
+  margin: 0 auto;
+}
+
+.section-questions :nth-child(2) {
+  filter: invert(58%) sepia(88%) saturate(1826%) hue-rotate(0deg) brightness(103%) contrast(103%);
 }
 
 .section-questions :nth-child(2) {
@@ -249,18 +277,49 @@ main .carousel{
 /* FOOTER COMPONENT */
 footer {
   width: calc(100vw - 20px);
-  height: 80px;
-  padding: 0 10px;
+  height: auto;
+  padding: 30px 10px;
   background: #EFEFEF;
+  text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-footer h3 {
+footer h2 {
   color: var(--main-color);
+  margin: 0 0 10px 0;
 }
 
+footer ul {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 10px 0 10px 0;
+  padding: 0;
+}
+
+footer li img{
+  width: 50%;
+  height: auto;
+}
+
+footer li p {
+  margin: 0;
+  font-size: 12px;
+  width: fit-content;
+}
+
+footer iframe {
+  margin-top: 10px;
+  width: 80%;
+  height: 200px;
+  border: 0;
+}
 
 
 

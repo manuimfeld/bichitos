@@ -15,7 +15,7 @@ const Header = () => {
     <header>
       <nav>
         <ul>
-          <li onClick={() => navigate("/carrito")}>
+          <li onClick={() => navigate("/inicio")}>
             <img src={menu} alt="" />
           </li>
           <li>
@@ -24,7 +24,7 @@ const Header = () => {
               <button type="submit"></button>
             </form>
           </li>
-          <li>
+          <li onClick={() => navigate("/carrito")}>
             <img src={cart} alt="" />
           </li>
         </ul>
