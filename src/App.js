@@ -30,7 +30,6 @@ function App() {
             element={<Cart cart={cart} setCart={setCart} />}
           />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </>
   );
