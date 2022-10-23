@@ -4,7 +4,7 @@ import "../styles/loading-spinner.css";
 const LoadingSpinner = () => {
   return (
     <>
-      <div class="lds-ellipsis">
+      <div className="lds-ellipsis">
         <div></div>
         <div></div>
         <div></div>
