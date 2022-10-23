@@ -10,10 +10,10 @@ const Footer = () => {
           width="600"
           height="450"
           title="local"
-          allowfullscreen=""
+          allowFullScreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          disableDefaultUI="true"
+          referrerPolicy="no-referrer-when-downgrade"
+          disabledefaultui="true"
         ></iframe>
       </footer>
     </>
