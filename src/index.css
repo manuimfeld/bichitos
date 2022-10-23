@@ -432,6 +432,16 @@ footer iframe {
   font-weight: 400;
 }
 
+.btn-filters {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
 .modal-filters {
   height: calc(100vh);
   width: 100vw;
@@ -445,7 +455,20 @@ footer iframe {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  z-index: 99;
+  z-index: 5;
+  opacity: 0;
+  animation-duration: 300ms;
+  animation-name: show-modal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-modal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .modal-filters header {
@@ -471,6 +494,7 @@ footer iframe {
   top: 10px;
   right: 10px;
   background: none;
+  color: #cecece;
   border: none;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
@@ -505,8 +529,8 @@ footer iframe {
 
 .modal-filters .filter-selected {
   background: var(--main-color);
-  border: none;
   color: #FFFFFF;
+  transition: all 300ms ease;
 }
 
 
