@@ -3,9 +3,8 @@ import { useState } from "react";
 import FiltersModal from "./FiltersModal";
 import addFilters from "../helpers/addFilters";
 
-const FiltersMenu = () => {
+const FiltersMenu = ({ filters, setFilters }) => {
   const [showModal, setShowModal] = useState(false);
-  const [filters, setFilters] = useState([]);
 
   const handleClick = () => {
     setShowModal(showModal === false ? true : false);
@@ -14,7 +13,9 @@ const FiltersMenu = () => {
   return (
     <div className="container-filters">
       <div className="filters-menu">
-        <button onClick={() => handleClick()}>Filtrar</button>
+        <button onClick={() => handleClick()} className="btn-filters">
+          Filtrar
+        </button>
         <FiltersModal
           showModal={showModal}
           setShowModal={setShowModal}
