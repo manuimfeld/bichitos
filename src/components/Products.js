@@ -6,7 +6,7 @@ import apiProducts from "../helpers/apiProducts";
 
 const Products = ({ cart, setCart }) => {
   const [products, setProducts] = useState([]);
-  const [filters, setFilters] = useState([]);
+  const [filters, setFilters] = useState({});
 
   useEffect(() => {
     apiProducts(setProducts);
