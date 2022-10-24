@@ -2,11 +2,11 @@ import React from "react";
 import editItemAmount from "../helpers/editItemAmount";
 import removeItemCart from "../helpers/removeItemCart";
 
-const ItemCart = (product, index, cart, setCart) => {
+const ItemCart = ({ product, index, cart, setCart }) => {
   return (
     <article>
       <img
-        src={`http://192.168.0.70:1337${product.attributes.Imagen.data.attributes.url}`}
+        src={`http://localhost:1337${product.attributes.Imagen.data.attributes.url}`}
         alt=""
       />
       <div className="cart-product-info">

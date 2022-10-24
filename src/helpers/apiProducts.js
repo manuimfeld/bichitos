@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const apiProducts = (setProducts) => {
-  const endpoint = "http://192.168.0.70:1337/api/productos?populate=*";
+const apiProducts = (setProducts, query = "") => {
+  const endpoint = `http://192.168.0.70:1337/api/productos?${query}populate=*`;
   axios
     .get(endpoint)
     .then((res) => {
