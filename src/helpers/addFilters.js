@@ -1,13 +1,14 @@
-const addFilters = (e, filters, setFilters) => {
-  let newList = [...filters];
+const addFilters = (key, value, filters, setFilters) => {
+  let newObj = { ...filters };
+  const values = newObj[key] || [];
 
-  if (!newList.includes(e)) {
-    newList.push(e);
-    setFilters(newList);
+  if (!values.includes(value)) {
+    newObj[key] = [...values, value];
   } else {
-    let index = newList.indexOf(e);
-    setFilters(newList.filter((filter) => filter !== newList[index]));
+    newObj[key] = values.filter((val) => val !== value);
   }
+
+  setFilters(newObj);
 };
 
 export default addFilters;
